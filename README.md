@@ -16,6 +16,10 @@ Xcode's own documentation browser is not (yet) supported, as it uses a slightly 
 	![Imgur](http://i.imgur.com/BUOvpx1.png)
 	
 	There are lots of tools that can do this. I used [CHM Decompiler](https://itunes.apple.com/ch/app/chm-decompiler/id476013157?mt=12). The script could probably be expanded to do this on its own using something like [PyCHM](http://gnochm.sourceforge.net/pychm.html), but for now, you have to do this manually.
+3. The script uses [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) to parse the documentation. If you don't have it already, install it:
+	
+		$ easy_install beautifulsoup4
+
 3. Run the python script to generate the Dash compatible DocSet from the extracted HTML documentation:
 
 		$ python ue4docset.py -n "Unreal Engine" ~/Desktop/API ~/Desktop/UE4.docset
